@@ -24,7 +24,7 @@ namespace GameStore.Controls
         protected string CreateHomeLinkHtml()
         {
             string path = RouteTable.Routes.GetVirtualPath(null, null).VirtualPath;
-            return string.Format("<a href='{0}'>Главная</a>", path);
+            return string.Format("<a href='{0}'>Жанры</a>", path);
         }
 
         protected string CreateLinkHtml(string category)

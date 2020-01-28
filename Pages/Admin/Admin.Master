@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1>GameStore: админ-панель</h1>
+        <h1>Мефодиница: админ-панель</h1>
         <div class="adminContent">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
@@ -18,7 +18,7 @@
     </form>
     <div id="nav">
         <a href="<%= OrdersUrl %>">Управление заказами</a>
-        <a href="<%= GamesUrl %>">Управление каталогом игр</a>
+        <a href="<%= GamesUrl %>">Управление каталогом</a>
     </div>
 </body>
 </html>

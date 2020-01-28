@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>GameStore</title>
+    <title>Мефодиница</title>
     <link rel="stylesheet" href="/Content/Styles.css" />
     <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
 </head>
@@ -13,7 +13,7 @@
         <div>
             <div id="header">
                 <GS:cartsummary runat="server" />
-                <div class="title">GameStore - магазин компьютерных игр</div>
+                <div class="title">Мефодиница. Книги захватывают мир - захвати и ты книгу</div>
             </div>
             <div id="categories">
                 <GS:CategoryLinks runat="server" />

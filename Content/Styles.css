@@ -6,23 +6,22 @@ div#header div.title, div.item h3, div.item h4, div.pager a {
     font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
 }
 div#header { 
-    background-color: #444; 
-    border-bottom: 2px solid #111; 
+    background-color: #B22222; 
+    border-bottom: 1px solid #111; 
     color: white;
 }
 div#header div.title { 
-    font-size: 2em; 
+    font-size: 20px; 
     padding: .6em;
 }
 div#content { 
-    border-left: 2px solid gray; 
+    border-left: 2px solid black; 
     margin-left: 9em; 
     padding: 1em; 
 }
 div#categories { 
     float: left; 
-    width: 8em; 
-    padding: .3em; 
+    width: 9em; 
 }
 
 div.item { 
@@ -99,10 +98,10 @@ p.actionButtons { text-align: center;}
 
 div#cartSummary { 
     float:right; 
-    margin: .8em; 
+    margin: .4em; 
     color: Silver; 
-    background-color: #555; 
-    padding: .5em .5em .5em 1em; 
+    background-color: white; 
+    padding: .1em .1em .1em 1em; 
 }
 div#cartSummary a { 
     text-decoration: none; 

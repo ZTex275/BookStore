@@ -3,7 +3,7 @@
 <div id="cartSummary">
     <span class="caption">
         <b>В корзине:</b>
-        <span id="csQuantity" runat="server"></span> товаров,
+        <span id="csQuantity" runat="server"></span>,
         <span id="csTotal" runat="server"></span>
     </span>
     <a id="csLink" runat="server">Корзина</a>
