@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="GameStore.Pages.Login"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BookStore.Pages.Login"
     MasterPageFile="~/Pages/Admin/Admin.Master" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

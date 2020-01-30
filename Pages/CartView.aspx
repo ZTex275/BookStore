@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CartView.aspx.cs" Inherits="GameStore.Pages.CartView"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CartView.aspx.cs" Inherits="BookStore.Pages.CartView"
     MasterPageFile="~/Pages/Store.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContent" runat="server">
@@ -14,18 +14,18 @@
                 </tr>
             </thead>
             <tbody>
-                <asp:Repeater ID="Repeater1" ItemType="GameStore.Models.CartLine"
+                <asp:Repeater ID="Repeater1" ItemType="BookStore.Models.CartLine"
                     SelectMethod="GetCartLines" runat="server" EnableViewState="false">
                     <ItemTemplate>
                         <tr>
                             <td><%# Item.Quantity %></td>
-                            <td><%# Item.Game.Name %></td>
-                            <td><%# Item.Game.Price.ToString("c")%></td>
+                            <td><%# Item.Book.NameBook %></td>
+                            <td><%# Item.Book.Price.ToString("c")%></td>
                             <td><%# ((Item.Quantity * 
-                                Item.Game.Price).ToString("c"))%></td>
+                                Item.Book.Price).ToString("c"))%></td>
                             <td>
                                 <button type="submit" class="actionButtons" name="remove"
-                                    value="<%#Item.Game.GameId %>">
+                                    value="<%#Item.Book.BookId %>">
                                     Удалить</button>
                             </td>
                         </tr>

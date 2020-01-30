@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Web.SessionState;
-using GameStore.Models;
+using BookStore.Models;
 
-namespace GameStore.Pages.Helpers
+namespace BookStore.Pages.Helpers
 {
     public enum SessionKey
     {

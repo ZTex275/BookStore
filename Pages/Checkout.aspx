@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="GameStore.Pages.Checkout"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="BookStore.Pages.Checkout"
     MasterPageFile="~/Pages/Store.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContent" runat="server">
@@ -18,7 +18,7 @@
             <h3>Заказчик</h3>
             <div>
                 <label for="name">Имя:</label>
-                <SX:VInput Property="Name" runat="server" />
+                <SX:VInput Property="Book" runat="server" />
             </div>
 
             <h3>Адрес доставки</h3>

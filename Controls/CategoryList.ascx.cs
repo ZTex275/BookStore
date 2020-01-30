@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Routing;
-using GameStore.Models.Repository;
+using BookStore.Models.Repository;
 
-namespace GameStore.Controls
+namespace BookStore.Controls
 {
     public partial class CategoryList : System.Web.UI.UserControl
     {
@@ -15,7 +15,7 @@ namespace GameStore.Controls
 
         protected IEnumerable<string> GetCategories()
         {
-            return new Repository().Games
+            return new Repository().Books
                 .Select(p => p.Category)
                 .Distinct()
                 .OrderBy(x => x);

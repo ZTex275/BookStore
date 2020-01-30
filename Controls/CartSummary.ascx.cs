@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using GameStore.Models;
+using BookStore.Models;
 using System.Web.Routing;
-using GameStore.Pages.Helpers;
+using BookStore.Pages.Helpers;
 
-namespace GameStore.Controls
+namespace BookStore.Controls
 {
     public partial class CartSummary : System.Web.UI.UserControl
     {

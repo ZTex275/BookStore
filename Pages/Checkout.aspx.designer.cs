@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameStore.Pages {
+namespace BookStore.Pages {
     
     
     public partial class Checkout {

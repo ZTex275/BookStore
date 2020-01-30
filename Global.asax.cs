@@ -2,7 +2,7 @@
 using System.Web.Routing;
 using System.Web.Optimization;
 
-namespace GameStore
+namespace BookStore
 {
     public class Global : System.Web.HttpApplication
     {

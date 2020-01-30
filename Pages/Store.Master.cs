@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GameStore.Pages
+namespace BookStore.Pages
 {
     public partial class Store : System.Web.UI.MasterPage
     {

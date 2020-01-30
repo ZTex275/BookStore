@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Security;
 
-namespace GameStore.Pages
+namespace BookStore.Pages
 {
     public partial class Login : System.Web.UI.Page
     {

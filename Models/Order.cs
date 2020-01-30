@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace GameStore.Models
+namespace BookStore.Models
 {
     public class Order
     {
         public int OrderId { get; set; }
 
         [Required(ErrorMessage="Пожалуйста введите свое имя")]
-        public string Name { get; set; }
+        public string Book { get; set; }
 
         [Required(ErrorMessage="Вы должны указать хотя бы один адрес доставки")]
         public string Line1 { get; set; }
@@ -29,7 +29,7 @@ namespace GameStore.Models
     {
         public int OrderLineId { get; set; }
         public Order Order { get; set; }
-        public Game Game { get; set; }
+        public Book Book { get; set; }
         public int Quantity { get; set; }
     }
 }

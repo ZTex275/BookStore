@@ -2,15 +2,15 @@
 using System.Data.Entity;
 using System.Linq;
 
-namespace GameStore.Models.Repository
+namespace BookStore.Models.Repository
 {
     public class Repository
     {
         private EFDbContext context = new EFDbContext();
 
-        public IEnumerable<Game> Games
+        public IEnumerable<Book> Books
         {
-            get { return context.Games; }
+            get { return context.Books; }
         }
 
         public IEnumerable<Order> Orders
@@ -18,43 +18,43 @@ namespace GameStore.Models.Repository
             get
             {
                 return context.Orders
-                    .Include(o => o.OrderLines.Select(ol => ol.Game));
+                    .Include(o => o.OrderLines.Select(ol => ol.Book));
             }
         }
 
-        public void SaveGame(Game game)
+        public void SaveBook(Book game)
         {
-            if (game.GameId == 0)
+            if (game.BookId == 0)
             {
-                game = context.Games.Add(game);
+                game = context.Books.Add(game);
             }
             else
             {
-                Game dbGame = context.Games.Find(game.GameId);
-                if (dbGame != null)
+                Book dbBook = context.Books.Find(game.BookId);
+                if (dbBook != null)
                 {
-                    dbGame.Name = game.Name;
-                    dbGame.Description = game.Description;
-                    dbGame.Price = game.Price;
-                    dbGame.Category = game.Category;
+                    dbBook.NameBook = game.NameBook;
+                    dbBook.Author = game.Author;
+                    dbBook.Price = game.Price;
+                    dbBook.Category = game.Category;
                 }
             }
             context.SaveChanges();
         }
 
-        public void DeleteGame(Game game)
+        public void DeleteBook(Book game)
         {
             IEnumerable<Order> orders = context.Orders
-                .Include(o => o.OrderLines.Select(ol => ol.Game))
+                .Include(o => o.OrderLines.Select(ol => ol.Book))
                 .Where(o => o.OrderLines
-                    .Count(ol => ol.Game.GameId == game.GameId) > 0)
+                    .Count(ol => ol.Book.BookId == game.BookId) > 0)
                 .ToArray();
 
             foreach (Order order in orders)
             {
                 context.Orders.Remove(order);
             }
-            context.Games.Remove(game);
+            context.Books.Remove(game);
             context.SaveChanges();
         }
 
@@ -66,7 +66,7 @@ namespace GameStore.Models.Repository
 
                 foreach (OrderLine line in order.OrderLines)
                 {
-                    context.Entry(line.Game).State
+                    context.Entry(line.Book).State
                         = EntityState.Modified;
                 }
 
@@ -76,7 +76,7 @@ namespace GameStore.Models.Repository
                 Order dbOrder = context.Orders.Find(order.OrderId);
                 if (dbOrder != null)
                 {
-                    dbOrder.Name = order.Name;
+                    dbOrder.Book = order.Book;
                     dbOrder.Line1 = order.Line1;
                     dbOrder.Line2 = order.Line2;
                     dbOrder.Line3 = order.Line3;

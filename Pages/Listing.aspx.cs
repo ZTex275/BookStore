@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using GameStore.Models;
-using GameStore.Models.Repository;
+using BookStore.Models;
+using BookStore.Models.Repository;
 using System.Linq;
-using GameStore.Pages.Helpers;
+using BookStore.Pages.Helpers;
 using System.Web.Routing;
 
-namespace GameStore.Pages
+namespace BookStore.Pages
 {
     public partial class Listing : System.Web.UI.Page
     {
@@ -25,7 +25,7 @@ namespace GameStore.Pages
         protected int MaxPage
         {
             get {
-                int prodCount = FilterGames().Count();
+                int prodCount = FilterBooks().Count();
                 return (int)Math.Ceiling((decimal)prodCount / pageSize);
             }
         }
@@ -38,17 +38,17 @@ namespace GameStore.Pages
             return reqValue != null && int.TryParse(reqValue, out page) ? page : 1;
         }
 
-        public IEnumerable<Game> GetGames()
+        public IEnumerable<Book> GetBooks()
         {
-            return FilterGames()
-                .OrderBy(g => g.GameId)
+            return FilterBooks()
+                .OrderBy(g => g.BookId)
                 .Skip((CurrentPage - 1) * pageSize)
                 .Take(pageSize);
         }
 
-        private IEnumerable<Game> FilterGames()
+        private IEnumerable<Book> FilterBooks()
         {
-            IEnumerable<Game> games = repository.Games;
+            IEnumerable<Book> games = repository.Books;
             string currentCategory = (string)RouteData.Values["category"] ??
                 Request.QueryString["category"];
             return currentCategory == null ? games :
@@ -59,15 +59,15 @@ namespace GameStore.Pages
         {
             if (IsPostBack)
             {
-                int selectedGameId;
-                if (int.TryParse(Request.Form["add"], out selectedGameId))
+                int selectedBookId;
+                if (int.TryParse(Request.Form["add"], out selectedBookId))
                 {
-                    Game selectedGame = repository.Games
-                        .Where(g => g.GameId == selectedGameId).FirstOrDefault();
+                    Book selectedBook = repository.Books
+                        .Where(g => g.BookId == selectedBookId).FirstOrDefault();
 
-                    if (selectedGame != null)
+                    if (selectedBook != null)
                     {
-                        SessionHelper.GetCart(Session).AddItem(selectedGame, 1);
+                        SessionHelper.GetCart(Session).AddItem(selectedBook, 1);
                         SessionHelper.Set(Session, SessionKey.RETURN_URL,
                             Request.RawUrl);
 

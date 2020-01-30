@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="GameStore.Pages.Admin.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BookStore.Pages.Admin.Admin" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,7 @@
     </form>
     <div id="nav">
         <a href="<%= OrdersUrl %>">Управление заказами</a>
-        <a href="<%= GamesUrl %>">Управление каталогом</a>
+        <a href="<%= BooksUrl %>">Управление каталогом</a>
     </div>
 </body>
 </html>

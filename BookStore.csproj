@@ -88,16 +88,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GameStore.mdf" />
-    <Content Include="App_Data\GameStore_log.ldf">
-      <DependentUpon>GameStore.mdf</DependentUpon>
+    <Content Include="App_Data\BookStore.mdf" />
+    <Content Include="App_Data\BookStore_log.ldf">
+      <DependentUpon>BookStore.mdf</DependentUpon>
     </Content>
     <Content Include="Content\Admin.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Controls\CartSummary.ascx" />
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Global.asax" />
-    <Content Include="Pages\Admin\Games.aspx" />
+    <Content Include="Pages\Admin\Books.aspx" />
     <Content Include="Pages\Admin\Orders.aspx" />
     <Content Include="Pages\CartView.aspx" />
     <Content Include="Pages\Checkout.aspx" />
@@ -137,7 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Models\Repository\Repository.cs" />
@@ -148,12 +148,12 @@
     <Compile Include="Pages\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\Games.aspx.cs">
-      <DependentUpon>Games.aspx</DependentUpon>
+    <Compile Include="Pages\Admin\Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Admin\Games.aspx.designer.cs">
-      <DependentUpon>Games.aspx</DependentUpon>
+    <Compile Include="Pages\Admin\Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>

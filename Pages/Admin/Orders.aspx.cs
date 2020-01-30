@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.ModelBinding;
-using GameStore.Models;
-using GameStore.Models.Repository;
+using BookStore.Models;
+using BookStore.Models.Repository;
 
-namespace GameStore.Pages.Admin
+namespace BookStore.Pages.Admin
 {
     public partial class Orders : System.Web.UI.Page
     {
@@ -45,7 +45,7 @@ namespace GameStore.Pages.Admin
             decimal total = 0;
             foreach (OrderLine ol in orderLines)
             {
-                total += ol.Game.Price * ol.Quantity;
+                total += ol.Book.Price * ol.Quantity;
             }
             return total;
         }

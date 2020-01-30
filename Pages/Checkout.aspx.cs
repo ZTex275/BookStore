@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using GameStore.Models;
-using GameStore.Models.Repository;
-using GameStore.Pages.Helpers;
+using BookStore.Models;
+using BookStore.Models.Repository;
+using BookStore.Pages.Helpers;
 using System.Web.ModelBinding;
 
-namespace GameStore.Pages
+namespace BookStore.Pages
 {
     public partial class Checkout : System.Web.UI.Page
     {
@@ -30,7 +30,7 @@ namespace GameStore.Pages
                         myOrder.OrderLines.Add(new OrderLine
                         {
                             Order = myOrder,
-                            Game = line.Game,
+                            Book = line.Book,
                             Quantity = line.Quantity
                         });
                     }

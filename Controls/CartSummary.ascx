@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CartSummary.ascx.cs" Inherits="GameStore.Controls.CartSummary" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CartSummary.ascx.cs" Inherits="BookStore.Controls.CartSummary" %>
 
 <div id="cartSummary">
     <span class="caption">

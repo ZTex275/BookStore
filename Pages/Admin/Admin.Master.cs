@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Routing;
 
-namespace GameStore.Pages.Admin
+namespace BookStore.Pages.Admin
 {
     public partial class Admin : System.Web.UI.MasterPage
     {
@@ -18,7 +18,7 @@ namespace GameStore.Pages.Admin
             }
         }
 
-        public string GamesUrl
+        public string BooksUrl
         {
             get
             {

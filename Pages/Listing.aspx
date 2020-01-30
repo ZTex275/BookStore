@@ -1,18 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="GameStore.Pages.Listing"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="BookStore.Pages.Listing"
     MasterPageFile="~/Pages/Store.Master" %>
 <%@ Import Namespace="System.Web.Routing" %>
 
 <asp:Content ContentPlaceHolderID="bodyContent" runat="server">
     <div id="content">
-        <asp:Repeater ItemType="GameStore.Models.Game"
-            SelectMethod="GetGames" runat="server">
+        <asp:Repeater ItemType="BookStore.Models.Book"
+            SelectMethod="GetBooks" runat="server">
             <ItemTemplate>
                 <div class="item">
-                    <h3><%# Item.Name %></h3>
-                    <%# Item.Description %>
+                    <h3><%# Item.NameBook %></h3>
+                    <%# Item.Author %>
                     <h4><%# Item.Price.ToString("c") %></h4>
-                    <button name="add" type="submit" value="<%# Item.GameId %>">
-                        Добавить в корзину
+                    <button name="add" type="submit" value="<%# Item.BookId %>">
+                        В корзину
                     </button>
                 </div>
             </ItemTemplate>

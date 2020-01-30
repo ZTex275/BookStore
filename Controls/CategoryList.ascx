@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryList.ascx.cs" Inherits="GameStore.Controls.CategoryList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryList.ascx.cs" Inherits="BookStore.Controls.CategoryList" %>
 
 <%= CreateHomeLinkHtml() %>
 

@@ -1,23 +1,23 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace GameStore.Models
+namespace BookStore.Models
 {
     public class Cart
     {
         private List<CartLine> lineCollection = new List<CartLine>();
 
-        public void AddItem(Game game, int quantity)
+        public void AddItem(Book game, int quantity)
         {
             CartLine line = lineCollection
-                .Where(p => p.Game.GameId == game.GameId)
+                .Where(p => p.Book.BookId == game.BookId)
                 .FirstOrDefault();
 
             if (line == null)
             {
                 lineCollection.Add(new CartLine
                 {
-                    Game = game,
+                    Book = game,
                     Quantity = quantity
                 });
             }
@@ -27,14 +27,14 @@ namespace GameStore.Models
             }
         }
 
-        public void RemoveLine(Game game)
+        public void RemoveLine(Book game)
         {
-            lineCollection.RemoveAll(l => l.Game.GameId == game.GameId);
+            lineCollection.RemoveAll(l => l.Book.BookId == game.BookId);
         }
 
         public decimal ComputeTotalValue()
         {
-            return lineCollection.Sum(e => e.Game.Price * e.Quantity);
+            return lineCollection.Sum(e => e.Book.Price * e.Quantity);
 
         }
         public void Clear()
@@ -50,7 +50,7 @@ namespace GameStore.Models
 
     public class CartLine
     {
-        public Game Game { get; set; }
+        public Book Book { get; set; }
         public int Quantity { get; set; }
     }
 }

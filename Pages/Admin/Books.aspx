@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Games.aspx.cs" Inherits="GameStore.Pages.Admin.Games"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Books.aspx.cs" Inherits="BookStore.Pages.Admin.Books"
     MasterPageFile="~/Pages/Admin/Admin.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ListView ID="ListView1" ItemType="GameStore.Models.Game" SelectMethod="GetGames"
-        DataKeyNames="GameId" UpdateMethod="UpdateGame" DeleteMethod="DeleteGame"
-        InsertMethod="InsertGame" InsertItemPosition="LastItem" EnableViewState="false"
+    <asp:ListView ID="ListView1" ItemType="BookStore.Models.Book" SelectMethod="GetBooks"
+        DataKeyNames="Id" UpdateMethod="UpdateBook" DeleteMethod="DeleteBook"
+        InsertMethod="InsertBook" InsertItemPosition="LastItem" EnableViewState="false"
         runat="server">
         <LayoutTemplate>
             <div class="outerContainer">
@@ -21,8 +21,8 @@
         </LayoutTemplate>
         <ItemTemplate>
             <tr>
-                <td><%# Item.Name %></td>
-                <td class="description"><span><%# Item.Description %></span></td>
+                <td><%# Item.NameBook %></td>
+                <td class="description"><span><%# Item.Author %></span></td>
                 <td><%# Item.Category %></td>
                 <td><%# Item.Price.ToString("c") %></td>
                 <td>
@@ -34,11 +34,11 @@
         <EditItemTemplate>
             <tr>
                 <td>
-                    <input name="name" value="<%# Item.Name %>" />
-                    <input type="hidden" name="ProductID" value="<%# Item.GameId %>" />
+                    <input name="name" value="<%# Item.NameBook %>" />
+                    <input type="hidden" name="ProductID" value="<%# Item.BookId %>" />
                 </td>
                 <td>
-                    <input name="description" value="<%# Item.Description %>" /></td>
+                    <input name="description" value="<%# Item.Author %>" /></td>
                 <td>
                     <input name="category" value="<%# Item.Category %>" /></td>
                 <td>

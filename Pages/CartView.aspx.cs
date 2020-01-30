@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using GameStore.Models;
-using GameStore.Models.Repository;
-using GameStore.Pages.Helpers;
+using BookStore.Models;
+using BookStore.Models.Repository;
+using BookStore.Pages.Helpers;
 using System.Web.Routing;
 
-namespace GameStore.Pages
+namespace BookStore.Pages
 {
     public partial class CartView : System.Web.UI.Page
     {
@@ -18,8 +18,8 @@ namespace GameStore.Pages
                 int gameId;
                 if (int.TryParse(Request.Form["remove"], out gameId))
                 {
-                    Game gameToRemove = repository.Games
-                        .Where(g => g.GameId == gameId).FirstOrDefault();
+                    Book gameToRemove = repository.Books
+                        .Where(g => g.BookId == gameId).FirstOrDefault();
                     if (gameToRemove != null)
                     {
                         SessionHelper.GetCart(Session).RemoveLine(gameToRemove);
