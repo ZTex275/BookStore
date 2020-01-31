@@ -22,7 +22,7 @@ namespace BookStore.Pages.Admin
         {
             get
             {
-                return generateURL("admin_games");
+                return generateURL("admin_books");
             }
         }
 

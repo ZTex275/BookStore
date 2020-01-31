@@ -15,7 +15,7 @@
                 ItemType="BookStore.Models.Order">
                 <ItemTemplate>
                     <tr>
-                        <td><%#: Item.Book %></td>
+                        <td><%#: Item.Name %></td>
                         <td><%#: Item.City %></td>
                         <td><%# Item.OrderLines.Sum(ol => ol.Quantity) %></td>
                         <td><%# Total(Item.OrderLines).ToString("C") %> </td>

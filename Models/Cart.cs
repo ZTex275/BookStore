@@ -7,17 +7,17 @@ namespace BookStore.Models
     {
         private List<CartLine> lineCollection = new List<CartLine>();
 
-        public void AddItem(Book game, int quantity)
+        public void AddItem(Book book, int quantity)
         {
             CartLine line = lineCollection
-                .Where(p => p.Book.BookId == game.BookId)
+                .Where(p => p.Book.BookId == book.BookId)
                 .FirstOrDefault();
 
             if (line == null)
             {
                 lineCollection.Add(new CartLine
                 {
-                    Book = game,
+                    Book = book,
                     Quantity = quantity
                 });
             }
@@ -27,9 +27,9 @@ namespace BookStore.Models
             }
         }
 
-        public void RemoveLine(Book game)
+        public void RemoveLine(Book book)
         {
-            lineCollection.RemoveAll(l => l.Book.BookId == game.BookId);
+            lineCollection.RemoveAll(l => l.Book.BookId == book.BookId);
         }
 
         public decimal ComputeTotalValue()

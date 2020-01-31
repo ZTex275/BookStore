@@ -22,39 +22,39 @@ namespace BookStore.Models.Repository
             }
         }
 
-        public void SaveBook(Book game)
+        public void SaveBook(Book book)
         {
-            if (game.BookId == 0)
+            if (book.BookId == 0)
             {
-                game = context.Books.Add(game);
+                book = context.Books.Add(book);
             }
             else
             {
-                Book dbBook = context.Books.Find(game.BookId);
+                Book dbBook = context.Books.Find(book.BookId);
                 if (dbBook != null)
                 {
-                    dbBook.NameBook = game.NameBook;
-                    dbBook.Author = game.Author;
-                    dbBook.Price = game.Price;
-                    dbBook.Category = game.Category;
+                    dbBook.NameBook = book.NameBook;
+                    dbBook.Author = book.Author;
+                    dbBook.Price = book.Price;
+                    dbBook.Category = book.Category;
                 }
             }
             context.SaveChanges();
         }
 
-        public void DeleteBook(Book game)
+        public void DeleteBook(Book book)
         {
             IEnumerable<Order> orders = context.Orders
                 .Include(o => o.OrderLines.Select(ol => ol.Book))
                 .Where(o => o.OrderLines
-                    .Count(ol => ol.Book.BookId == game.BookId) > 0)
+                    .Count(ol => ol.Book.BookId == book.BookId) > 0)
                 .ToArray();
 
             foreach (Order order in orders)
             {
                 context.Orders.Remove(order);
             }
-            context.Books.Remove(game);
+            context.Books.Remove(book);
             context.SaveChanges();
         }
 
@@ -76,12 +76,9 @@ namespace BookStore.Models.Repository
                 Order dbOrder = context.Orders.Find(order.OrderId);
                 if (dbOrder != null)
                 {
-                    dbOrder.Book = order.Book;
+                    dbOrder.Name = order.Name;
                     dbOrder.Line1 = order.Line1;
-                    dbOrder.Line2 = order.Line2;
-                    dbOrder.Line3 = order.Line3;
                     dbOrder.City = order.City;
-                    dbOrder.GiftWrap = order.GiftWrap;
                     dbOrder.Dispatched = order.Dispatched;
                 }
             }

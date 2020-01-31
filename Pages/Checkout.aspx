@@ -18,31 +18,19 @@
             <h3>Заказчик</h3>
             <div>
                 <label for="name">Имя:</label>
-                <SX:VInput Property="Book" runat="server" />
+                <SX:VInput Property="Name" runat="server" />
             </div>
 
             <h3>Адрес доставки</h3>
             <div>
-                <label for="line1">Адрес 1:</label>
+                <label for="line1">Адрес:</label>
                 <SX:VInput Property="Line1" runat="server" />
-            </div>
-            <div>
-                <label for="line2">Адрес 2:</label>
-                <SX:VInput Property="Line2" runat="server" />
-            </div>
-            <div>
-                <label for="line3">Адрес 3:</label>
-                <SX:VInput Property="Line3" runat="server" />
             </div>
             <div>
                 <label for="city">Город:</label>
                 <SX:VInput Property="City" runat="server" />
             </div>
 
-            <h3>Детали заказа</h3>
-            <input type="checkbox" id="giftwrap" name="giftwrap" value="true" />
-            Использовать подарочную упаковку?
-        
         <p class="actionButtons">
             <button class="actionButtons" type="submit">Обработать заказ</button>
         </p>

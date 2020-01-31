@@ -3,16 +3,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ListView ID="ListView1" ItemType="BookStore.Models.Book" SelectMethod="GetBooks"
-        DataKeyNames="Id" UpdateMethod="UpdateBook" DeleteMethod="DeleteBook"
+        DataKeyNames="BookId" UpdateMethod="UpdateBook" DeleteMethod="DeleteBook"
         InsertMethod="InsertBook" InsertItemPosition="LastItem" EnableViewState="false"
         runat="server">
         <LayoutTemplate>
             <div class="outerContainer">
                 <table id="productsTable">
                     <tr>
-                        <th>Название игры</th>
+                        <th>Название книги</th>
                         <th>Описание</th>
-                        <th>Категория</th>
+                        <th>Автор</th>
                         <th>Цена</th>
                     </tr>
                     <tr runat="server" id="itemPlaceholder"></tr>

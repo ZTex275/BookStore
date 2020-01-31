@@ -15,14 +15,14 @@ namespace BookStore.Pages
             if (IsPostBack)
             {
                 Repository repository = new Repository();
-                int gameId;
-                if (int.TryParse(Request.Form["remove"], out gameId))
+                int bookId;
+                if (int.TryParse(Request.Form["remove"], out bookId))
                 {
-                    Book gameToRemove = repository.Books
-                        .Where(g => g.BookId == gameId).FirstOrDefault();
-                    if (gameToRemove != null)
+                    Book bookToRemove = repository.Books
+                        .Where(g => g.BookId == bookId).FirstOrDefault();
+                    if (bookToRemove != null)
                     {
-                        SessionHelper.GetCart(Session).RemoveLine(gameToRemove);
+                        SessionHelper.GetCart(Session).RemoveLine(bookToRemove);
                     }
                 }
             }

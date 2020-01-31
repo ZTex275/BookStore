@@ -32,7 +32,7 @@ C:\BookStore\bin\EntityFramework.xml
 C:\BookStore\bin\EntityFramework.SqlServer.xml
 C:\BookStore\bin\Newtonsoft.Json.xml
 C:\BookStore\bin\System.Web.Optimization.xml
-C:\BookStore\obj\Debug\BookStore.csprojAssemblyReference.cache
 C:\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\BookStore\obj\Debug\GameStore.dll
 C:\BookStore\obj\Debug\GameStore.pdb
+C:\BookStore\obj\Debug\BookStore.csprojAssemblyReference.cache

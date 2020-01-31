@@ -11,7 +11,7 @@ namespace BookStore.Pages
     public partial class Listing : System.Web.UI.Page
     {
         private Repository repository = new Repository();
-        private int pageSize = 4;
+        private int pageSize = 6;
 
         protected int CurrentPage
         {
@@ -48,11 +48,11 @@ namespace BookStore.Pages
 
         private IEnumerable<Book> FilterBooks()
         {
-            IEnumerable<Book> games = repository.Books;
+            IEnumerable<Book> books = repository.Books;
             string currentCategory = (string)RouteData.Values["category"] ??
                 Request.QueryString["category"];
-            return currentCategory == null ? games :
-                games.Where(p => p.Category == currentCategory);
+            return currentCategory == null ? books :
+                books.Where(p => p.Category == currentCategory);
         }
 
         protected void Page_Load(object sender, EventArgs e)
