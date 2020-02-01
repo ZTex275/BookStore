@@ -10,13 +10,13 @@ namespace BookStore.Models
     {
         public int OrderId { get; set; }
 
-        [Required(ErrorMessage="Пожалуйста введите свое имя")]
+        [Required(ErrorMessage="Введите свое имя")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage="Вы должны указать хотя бы один адрес доставки")]
+        [Required(ErrorMessage="Вы должны адрес доставки")]
         public string Line1 { get; set; }
 
-        [Required(ErrorMessage="Пожалуйста укажите город, куда нужно доставить заказ")]
+        [Required(ErrorMessage="Укажите ваш город")]
         public string City { get; set; }
         public bool Dispatched { get; set; }
         public virtual List<OrderLine> OrderLines { get; set; }

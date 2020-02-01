@@ -25,7 +25,7 @@ div#categories {
 }
 
 div.item { 
-    border-top: 1px dotted gray; 
+    border-top: 1px dashed black; 
     padding-top: .7em; 
     margin-bottom: .7em; 
 }
@@ -66,7 +66,7 @@ div#categories a
     text-decoration: none; padding: .6em; color: Black;
     border-bottom: 1px solid silver;
 }
-div#categories a.selected { background-color: #666; color: White; }
+div#categories a.selected { background-color: #B22222; color: White; }
 div#categories a:hover { background-color: #CCC; }
 div#categories a.selected:hover { background-color: #666; }
 
@@ -87,11 +87,15 @@ h2 { margin-top: 0.3em }
 #cartTable tbody td:first-child { text-align: center;}
 #cartTable tbody td:nth-child(2) { text-align: left;}
 #cartTable tfoot tr td { text-align: right;}
-p.actionButtons { text-align: center;}
+p.actionButtons { text-align: left;}
 .actionButtons a, button.actionButtons {
-    font: .8em Arial; color: White; margin: .5em;
-    text-decoration: none; padding: .15em 1.5em .2em 1.5em;
-    background-color: #353535; border: 1px solid black;
+    font: .8em Arial;
+    color: White;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #B22222;
+    border: 1px solid black;
 }
 
 
