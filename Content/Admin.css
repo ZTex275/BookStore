@@ -16,13 +16,13 @@ div#nav {
 div#nav a {
     font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; 
     display: inline-block;
-    color: black; padding: 6px; border: solid medium black;
+    color: white; padding: 4px; border: dashed solid black; background-color: #B22222;
     text-decoration: none; width: 200px; text-align: center;
 }
 
 div#nav a:hover {
     background: #888;
-    color: white;
+    color: black;
 }
 
 .adminContent {
