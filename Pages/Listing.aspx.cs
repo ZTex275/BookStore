@@ -11,7 +11,7 @@ namespace BookStore.Pages
     public partial class Listing : System.Web.UI.Page
     {
         private Repository repository = new Repository();
-        private int pageSize = 6;
+        private int pageSize = 3;
 
         protected int CurrentPage
         {

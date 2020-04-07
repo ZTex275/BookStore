@@ -9,5 +9,7 @@ namespace BookStore.Models
         public string Author { get; set; }
         public string Category { get; set; }
         public decimal Price { get; set; }
+        public byte[] ImageData { get; set; }
+        public string ImageMimeType { get; set; }
     }
 }

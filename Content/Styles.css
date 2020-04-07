@@ -102,7 +102,7 @@ p.actionButtons { text-align: left;}
 div#cartSummary { 
     float:right; 
     margin: .4em; 
-    color: Silver; 
+    color: gray; 
     background-color: white; 
     padding: .1em .1em .1em 1em; 
 }

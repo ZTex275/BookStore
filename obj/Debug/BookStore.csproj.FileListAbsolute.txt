@@ -36,3 +36,15 @@ C:\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\BookStore\obj\Debug\GameStore.dll
 C:\BookStore\obj\Debug\GameStore.pdb
 C:\BookStore\obj\Debug\BookStore.csprojAssemblyReference.cache
+C:\BookStore\bin\System.Web.Helpers.dll
+C:\BookStore\bin\System.Web.Mvc.dll
+C:\BookStore\bin\System.Web.Razor.dll
+C:\BookStore\bin\System.Web.WebPages.Deployment.dll
+C:\BookStore\bin\System.Web.WebPages.dll
+C:\BookStore\bin\System.Web.WebPages.Razor.dll
+C:\BookStore\bin\System.Web.Helpers.xml
+C:\BookStore\bin\System.Web.Mvc.xml
+C:\BookStore\bin\System.Web.Razor.xml
+C:\BookStore\bin\System.Web.WebPages.xml
+C:\BookStore\bin\System.Web.WebPages.Deployment.xml
+C:\BookStore\bin\System.Web.WebPages.Razor.xml
